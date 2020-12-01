@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>Aubergine</td>
+                          <td>1</td>
+                        <td>01 Dec 2020, 12:05</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Steps Statistics</h2>
+              <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              <table id="tablesorter" class="stats-table table-hover">
+
+          <thead>
+            <tr class="header">
+              <th>Implementation</th>
+              <th>Occurrences</th>
+              <th>Duration</th>
+              <th>Average</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+                          <tr>
+                <td class="location">flipkart.CloseBrowser()</td>
+                <td>1</td>
+                <td class="duration" data-value="1533258354">1s 533ms</td>
+                <td class="duration" data-value="1533258354">1s 533ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">flipkart.SelectAC()</td>
+                <td>1</td>
+                <td class="duration" data-value="2315363286">2s 315ms</td>
+                <td class="duration" data-value="2315363286">2s 315ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">flipkart.addProductToCart()</td>
+                <td>1</td>
+                <td class="duration" data-value="11876793563">11s 876ms</td>
+                <td class="duration" data-value="11876793563">11s 876ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">flipkart.changeAreaPinCode(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="5409046691">5s 409ms</td>
+                <td class="duration" data-value="5409046691">5s 409ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">flipkart.clickOnCompare()</td>
+                <td>1</td>
+                <td class="duration" data-value="1184661745">1s 184ms</td>
+                <td class="duration" data-value="1184661745">1s 184ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">flipkart.closeLoginPopup()</td>
+                <td>1</td>
+                <td class="duration" data-value="63969794">063ms</td>
+                <td class="duration" data-value="63969794">063ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">flipkart.enterAreaPinCode(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="4289439042">4s 289ms</td>
+                <td class="duration" data-value="4289439042">4s 289ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">flipkart.enterSearchKeyword(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="1864452098">1s 864ms</td>
+                <td class="duration" data-value="1864452098">1s 864ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">flipkart.getAvailableProducts()</td>
+                <td>2</td>
+                <td class="duration" data-value="4222921765">4s 222ms</td>
+                <td class="duration" data-value="2111460882">2s 111ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">flipkart.getCompareProductElements()</td>
+                <td>1</td>
+                <td class="duration" data-value="134078463">134ms</td>
+                <td class="duration" data-value="134078463">134ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">flipkart.getSearchedResults()</td>
+                <td>1</td>
+                <td class="duration" data-value="577351757">577ms</td>
+                <td class="duration" data-value="577351757">577ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">flipkart.launchURL(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="1175055495">1s 175ms</td>
+                <td class="duration" data-value="1175055495">1s 175ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">flipkart.openBrowser(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="7711014931">7s 711ms</td>
+                <td class="duration" data-value="7711014931">7s 711ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">flipkart.openFlipKart()</td>
+                <td>1</td>
+                <td class="duration" data-value="3470805216">3s 470ms</td>
+                <td class="duration" data-value="3470805216">3s 470ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">flipkart.printAvailableProductDetails()</td>
+                <td>2</td>
+                <td class="duration" data-value="79403737">079ms</td>
+                <td class="duration" data-value="39701868">039ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">flipkart.printProductsNameAndPrice()</td>
+                <td>1</td>
+                <td class="duration" data-value="115971883">115ms</td>
+                <td class="duration" data-value="115971883">115ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">flipkart.printSearchedResults()</td>
+                <td>1</td>
+                <td class="duration" data-value="811040303">811ms</td>
+                <td class="duration" data-value="811040303">811ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">flipkart.selectProductForCompare()</td>
+                <td>1</td>
+                <td class="duration" data-value="3616801323">3s 616ms</td>
+                <td class="duration" data-value="3616801323">3s 616ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">flipkart.verifyAvailableProducts()</td>
+                <td>2</td>
+                <td class="duration" data-value="4115507671">4s 115ms</td>
+                <td class="duration" data-value="2057753835">2s 057ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">flipkart.verifyCompareOption()</td>
+                <td>2</td>
+                <td class="duration" data-value="272197741">272ms</td>
+                <td class="duration" data-value="136098870">136ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">flipkart.verifyCompareWindowPage()</td>
+                <td>3</td>
+                <td class="duration" data-value="6052140329">6s 052ms</td>
+                <td class="duration" data-value="2017380109">2s 017ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">flipkart.verifyFlipkartPage()</td>
+                <td>4</td>
+                <td class="duration" data-value="8073994177">8s 073ms</td>
+                <td class="duration" data-value="2018498544">2s 018ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">flipkart.verifyGooglePage()</td>
+                <td>2</td>
+                <td class="duration" data-value="28444990">028ms</td>
+                <td class="duration" data-value="14222495">014ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">flipkart.verifyProductsAddeInCart()</td>
+                <td>6</td>
+                <td class="duration" data-value="1340364226">1s 340ms</td>
+                <td class="duration" data-value="223394037">223ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">flipkart.verifySearchedKeyword()</td>
+                <td>3</td>
+                <td class="duration" data-value="36988555">036ms</td>
+                <td class="duration" data-value="12329518">012ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">flipkart.verifyWindowACPage()</td>
+                <td>2</td>
+                <td class="duration" data-value="4036834386">4s 036ms</td>
+                <td class="duration" data-value="2018417193">2s 018ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                      </tbody>
+
+          <tfoot class="total">
+            <tr>
+              <td>26</td>
+              <td>44</td>
+              <td class="duration">1m 14s 407ms</td>
+              <td class="duration">1s 691ms</td>
+              <td>Totals</td>
+            </tr>
+          </tfoot>
+
+        </table>
+          </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

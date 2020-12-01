@@ -1,0 +1,846 @@
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "#Author: Ashvin.Piprotar"
+      },
+      {
+        "line": 2,
+        "value": "#Keywords Summary :"
+      },
+      {
+        "line": 3,
+        "value": "#Feature: List of scenarios."
+      },
+      {
+        "line": 4,
+        "value": "#Scenario: Business rule through list of steps with arguments."
+      }
+    ],
+    "line": 7,
+    "elements": [
+      {
+        "line": 18,
+        "name": "Open Google.com",
+        "description": "",
+        "id": "search-product-from-flipcart;open-google.com;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7711014931,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "that given Chrome has been opened",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Chrome",
+                  "offset": 11
+                }
+              ],
+              "location": "flipkart.openBrowser(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1175055495,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I launch https://www.google.com",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://www.google.com",
+                  "offset": 9
+                }
+              ],
+              "location": "flipkart.launchURL(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 16507435,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "google search page should display",
+            "match": {
+              "location": "flipkart.verifyGooglePage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 6,
+            "name": "@functional"
+          }
+        ]
+      },
+      {
+        "line": 21,
+        "name": "Search for \"Flipkart\"",
+        "description": "",
+        "id": "search-product-from-flipcart;search-for-\"flipkart\"",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 11937555,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "google search page is opened",
+            "match": {
+              "location": "flipkart.verifyGooglePage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1864452098,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "I enter \"Flipkart\" in search text box",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Flipkart",
+                  "offset": 9
+                }
+              ],
+              "location": "flipkart.enterSearchKeyword(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 15048236,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I verify the Flipkart keyword is searched by google",
+            "match": {
+              "location": "flipkart.verifySearchedKeyword()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 20,
+            "name": "@functional"
+          }
+        ]
+      },
+      {
+        "line": 27,
+        "name": "Print all the search options displayed in the console from google�s search field, while we write �Flipkart� in that.",
+        "description": "",
+        "id": "search-product-from-flipcart;print-all-the-search-options-displayed-in-the-console-from-google�s-search-field,-while-we-write-�flipkart�-in-that.",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 11802159,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "Flipkart keyword is searched from google",
+            "match": {
+              "location": "flipkart.verifySearchedKeyword()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 577351757,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "I get all the searched results",
+            "match": {
+              "location": "flipkart.getSearchedResults()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 811040303,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "I should be able to print search results",
+            "match": {
+              "location": "flipkart.printSearchedResults()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 26,
+            "name": "@functional"
+          }
+        ]
+      },
+      {
+        "line": 33,
+        "name": "Press enter to give out the search results and open the link for the �flipkart.com� website available.",
+        "description": "",
+        "id": "search-product-from-flipcart;press-enter-to-give-out-the-search-results-and-open-the-link-for-the-�flipkart.com�-website-available.",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 10138160,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "Flipkart keyword is searched from google",
+            "match": {
+              "location": "flipkart.verifySearchedKeyword()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3470805216,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "I open flipkart link from search result",
+            "match": {
+              "location": "flipkart.openFlipKart()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2021423768,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "I should be able to see flipkart page is opened",
+            "match": {
+              "location": "flipkart.verifyFlipkartPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 32,
+            "name": "@functional"
+          }
+        ]
+      },
+      {
+        "line": 39,
+        "name": "Close the login popup on the website (if available)",
+        "description": "",
+        "id": "search-product-from-flipcart;close-the-login-popup-on-the-website-(if-available)",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2016215595,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "I am on Flipkart page",
+            "match": {
+              "location": "flipkart.verifyFlipkartPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 63969794,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "I close login window if opened",
+            "match": {
+              "location": "flipkart.closeLoginPopup()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2018168589,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "I should be able to see flipkart page is opened",
+            "match": {
+              "location": "flipkart.verifyFlipkartPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 38,
+            "name": "@functional"
+          }
+        ]
+      },
+      {
+        "line": 45,
+        "name": "Click on �TV \u0026 Appliances� dropdown button and Navigate to �AirConditioners \u003e Window AC�s� page",
+        "description": "",
+        "id": "search-product-from-flipcart;click-on-�tv-\u0026-appliances�-dropdown-button-and-navigate-to-�airconditioners-\u003e-window-ac�s�-page",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2018186225,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "I am on Flipkart page",
+            "match": {
+              "location": "flipkart.verifyFlipkartPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2315363286,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "I select window AC",
+            "match": {
+              "location": "flipkart.SelectAC()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2016746937,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "I should be able to see winodw AC page is opened",
+            "match": {
+              "location": "flipkart.verifyWindowACPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 44,
+            "name": "@functional"
+          }
+        ]
+      },
+      {
+        "line": 51,
+        "name": "Click on the �Add To Compare� checkbox of the 2nd, 3rd and 6th products displayed.",
+        "description": "",
+        "id": "search-product-from-flipcart;click-on-the-�add-to-compare�-checkbox-of-the-2nd,-3rd-and-6th-products-displayed.",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2020087449,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "I am on Window AC page",
+            "match": {
+              "location": "flipkart.verifyWindowACPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3616801323,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "I select compare button of 2nd 3rd and 6th product",
+            "match": {
+              "location": "flipkart.selectProductForCompare()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 157774941,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "I should be able to see 2nd 3rd and 6th product are selected",
+            "match": {
+              "location": "flipkart.verifyCompareOption()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 50,
+            "name": "@functional"
+          }
+        ]
+      },
+      {
+        "line": 57,
+        "name": "then Click on the COMPARE button",
+        "description": "",
+        "id": "search-product-from-flipcart;then-click-on-the-compare-button",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 114422800,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "I selected products for compare",
+            "match": {
+              "location": "flipkart.verifyCompareOption()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1184661745,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "I click on compare button",
+            "match": {
+              "location": "flipkart.clickOnCompare()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2019634615,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "I moved to copare product page",
+            "match": {
+              "location": "flipkart.verifyCompareWindowPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 56,
+            "name": "@functional"
+          }
+        ]
+      },
+      {
+        "line": 63,
+        "name": "Print Name and price of all three products in the console",
+        "description": "",
+        "id": "search-product-from-flipcart;print-name-and-price-of-all-three-products-in-the-console",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2015957320,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "I am in compare product page",
+            "match": {
+              "location": "flipkart.verifyCompareWindowPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 134078463,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "I get Product name and price of all compared product",
+            "match": {
+              "location": "flipkart.getCompareProductElements()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 115971883,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "I print Product name and price of all compared product",
+            "match": {
+              "location": "flipkart.printProductsNameAndPrice()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 62,
+            "name": "@functional"
+          }
+        ]
+      },
+      {
+        "line": 69,
+        "name": "Add all the 3 products into the cart, one by one",
+        "description": "",
+        "id": "search-product-from-flipcart;add-all-the-3-products-into-the-cart,-one-by-one",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2016548394,
+              "status": "passed"
+            },
+            "line": 70,
+            "name": "I am in compare product page",
+            "match": {
+              "location": "flipkart.verifyCompareWindowPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 11876793563,
+              "status": "passed"
+            },
+            "line": 71,
+            "name": "I add all three product on cart",
+            "match": {
+              "location": "flipkart.addProductToCart()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1029805201,
+              "status": "passed"
+            },
+            "line": 72,
+            "name": "I should be able to see products are added in Cart",
+            "match": {
+              "location": "flipkart.verifyProductsAddeInCart()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 68,
+            "name": "@functional"
+          }
+        ]
+      },
+      {
+        "line": 82,
+        "name": "Go to the cart and add your area Pincode and check the availability of the product delivery there",
+        "description": "",
+        "id": "search-product-from-flipcart;go-to-the-cart-and-add-your-area-pincode-and-check-the-availability-of-the-product-delivery-there;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 58206386,
+              "status": "passed"
+            },
+            "line": 76,
+            "name": "I am in My Cart page",
+            "match": {
+              "location": "flipkart.verifyProductsAddeInCart()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4289439042,
+              "status": "passed"
+            },
+            "line": 77,
+            "name": "I enter my 382481 Code number",
+            "match": {
+              "arguments": [
+                {
+                  "val": "382481",
+                  "offset": 11
+                }
+              ],
+              "location": "flipkart.enterAreaPinCode(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2059141070,
+              "status": "passed"
+            },
+            "line": 78,
+            "name": "Verify available products for entered PIN Code",
+            "match": {
+              "location": "flipkart.verifyAvailableProducts()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 6,
+            "name": "@functional"
+          }
+        ]
+      },
+      {
+        "line": 85,
+        "name": "Print the message getting displayed for the availability/delivery of the product in the console",
+        "description": "",
+        "id": "search-product-from-flipcart;print-the-message-getting-displayed-for-the-availability/delivery-of-the-product-in-the-console",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 77221481,
+              "status": "passed"
+            },
+            "line": 86,
+            "name": "I am in My Cart page",
+            "match": {
+              "location": "flipkart.verifyProductsAddeInCart()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2106118736,
+              "status": "passed"
+            },
+            "line": 87,
+            "name": "I get the available product details",
+            "match": {
+              "location": "flipkart.getAvailableProducts()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 36619915,
+              "status": "passed"
+            },
+            "line": 88,
+            "name": "I print available product details on console",
+            "match": {
+              "location": "flipkart.printAvailableProductDetails()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 84,
+            "name": "@functional"
+          }
+        ]
+      },
+      {
+        "line": 98,
+        "name": "Click the �Deliver to� input box, available to the top of the page, and add another pin code and check the availability of the product delivery there",
+        "description": "",
+        "id": "search-product-from-flipcart;click-the-�deliver-to�-input-box,-available-to-the-top-of-the-page,-and-add-another-pin-code-and-check-the-availability-of-the-product-delivery-there;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 51036117,
+              "status": "passed"
+            },
+            "line": 92,
+            "name": "I am in My Cart page",
+            "match": {
+              "location": "flipkart.verifyProductsAddeInCart()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5409046691,
+              "status": "passed"
+            },
+            "line": 93,
+            "name": "I change my 380054 Code number",
+            "match": {
+              "arguments": [
+                {
+                  "val": "380054",
+                  "offset": 12
+                }
+              ],
+              "location": "flipkart.changeAreaPinCode(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2056366601,
+              "status": "passed"
+            },
+            "line": 94,
+            "name": "Verify available products for entered PIN Code",
+            "match": {
+              "location": "flipkart.verifyAvailableProducts()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 6,
+            "name": "@functional"
+          }
+        ]
+      },
+      {
+        "line": 101,
+        "name": "Print the message getting displayed for the availability/delivery of the product in the console for the changed Pincode",
+        "description": "",
+        "id": "search-product-from-flipcart;print-the-message-getting-displayed-for-the-availability/delivery-of-the-product-in-the-console-for-the-changed-pincode",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 64545510,
+              "status": "passed"
+            },
+            "line": 102,
+            "name": "I am in My Cart page",
+            "match": {
+              "location": "flipkart.verifyProductsAddeInCart()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2116803029,
+              "status": "passed"
+            },
+            "line": 103,
+            "name": "I get the available product details",
+            "match": {
+              "location": "flipkart.getAvailableProducts()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 42783822,
+              "status": "passed"
+            },
+            "line": 104,
+            "name": "I print available product details on console",
+            "match": {
+              "location": "flipkart.printAvailableProductDetails()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 100,
+            "name": "@functional"
+          }
+        ]
+      },
+      {
+        "line": 107,
+        "name": "Close the browser",
+        "description": "",
+        "id": "search-product-from-flipcart;close-the-browser",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 59549531,
+              "status": "passed"
+            },
+            "line": 108,
+            "name": "I am in My Cart page",
+            "match": {
+              "location": "flipkart.verifyProductsAddeInCart()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1533258354,
+              "status": "passed"
+            },
+            "line": 109,
+            "name": "I close browser",
+            "match": {
+              "location": "flipkart.CloseBrowser()"
+            },
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "line": 106,
+            "name": "@functional"
+          }
+        ]
+      }
+    ],
+    "name": "Search product from flipcart",
+    "description": "Search flipcart website from google, search product from flipcart and add into cart.",
+    "id": "search-product-from-flipcart",
+    "keyword": "Feature",
+    "uri": "src/test/java/resources/Flipkart.feature",
+    "tags": [
+      {
+        "line": 6,
+        "name": "@functional"
+      }
+    ]
+  }
+]
