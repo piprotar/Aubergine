@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Cucumber" verbose="1" parallel="classes">
+	<test name="data">
+
+		<classes>
+			<class name="com.rest.ops.runner.EmployeeRunner"></class>
+			<class name="com.rest.ops.runner.ProductsRunner"></class>
+		</classes>
+	</test>
+</suite>
